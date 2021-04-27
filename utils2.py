@@ -1,4 +1,4 @@
-def get_reward_per_snapshot(**kwargs):
+def get_reward_per_snapshot2(**kwargs):
     """
     Get the global reward rate for each snapshot
     kwargs:
