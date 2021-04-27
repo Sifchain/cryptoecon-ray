@@ -35,10 +35,10 @@ def get_reward_per_snapshot2(**kwargs):
     rewardSnapshots = [r/sum(rewardSnapshots)*totalReward for r in rewardSnapshots] # normalise
     return rewardSnapshots
 
-globalSnapshots = elementwisesum(list_userSnapshots)
-assert len(userSnapshots) == len(globalSnapshots), 'Lists have different lengths'
+# globalSnapshots = elementwisesum(list_userSnapshots)
+# assert len(userSnapshots) == len(globalSnapshots), 'Lists have different lengths'
 
-rewardSnapshots = get_reward_per_snapshot(**kwargs)
-rewardSnapshots = rewardSnapshots[:len(userSnapshots)] # trim to ignore reward allocation for future snapshots
-userAccReward = sum([userStaked / globalStaked * reward if globalStaked > 0 else 0 for userStaked, globalStaked, reward in zip(userSnapshots, globalSnapshots, rewardSnapshots)])
-return userAccReward
+# rewardSnapshots = get_reward_per_snapshot(**kwargs)
+# rewardSnapshots = rewardSnapshots[:len(userSnapshots)] # trim to ignore reward allocation for future snapshots
+# userAccReward = sum([userStaked / globalStaked * reward if globalStaked > 0 else 0 for userStaked, globalStaked, reward in zip(userSnapshots, globalSnapshots, rewardSnapshots)])
+# return userAccReward
